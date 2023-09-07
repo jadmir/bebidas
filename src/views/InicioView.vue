@@ -10,7 +10,9 @@ const bebidas = useBebidasStore()
         Recetas
    </h1>
 
-   <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
+   <p v-if="bebidas.noRecentas" class="my-10 text-center text-2xl">No hay Resultados, Utiliza el formulario para buscar recetas</p>
+
+   <div v-else class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 my-10 gap-10">
       <Receta
          v-for="receta in bebidas.recetas"
          :receta="receta"
