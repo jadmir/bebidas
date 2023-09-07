@@ -6,5 +6,9 @@ export default {
     },
     buscarRecetas({categoria, nombre}) {
         return api(`/filter.php?c=${categoria}&i=${nombre}`)
+    },
+    BuscarReceta(id) {
+        return api(`/lookup.php?i=${id}`)
     }
+
 }
